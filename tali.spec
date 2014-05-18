@@ -1,12 +1,12 @@
 Summary:	GNOME Tali
 Summary(pl.UTF-8):	Tali dla GNOME
 Name:		tali
-Version:	3.12.1
+Version:	3.12.2
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/tali/3.12/%{name}-%{version}.tar.xz
-# Source0-md5:	02d4a94e841e15027783f91eb6dbda50
+# Source0-md5:	d26dbc8eac48f8fa126b48283a056152
 URL:		https://wiki.gnome.org/Apps/Tali
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
