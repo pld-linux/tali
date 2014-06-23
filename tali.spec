@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Tali dla GNOME
 Name:		tali
 Version:	3.12.2
 Release:	1
-License:	GPL v2
+License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/tali/3.12/%{name}-%{version}.tar.xz
 # Source0-md5:	d26dbc8eac48f8fa126b48283a056152
@@ -71,9 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc NEWS
 %attr(755,root,root) %{_bindir}/tali
 %{_datadir}/appdata/tali.appdata.xml
-%{_iconsdir}/HighContrast/*/*/*.png
-%{_iconsdir}/hicolor/*/*/*.png
-%{_iconsdir}/hicolor/*/*/*.svg
+%{_iconsdir}/HighContrast/*/apps/tali.png
+%{_iconsdir}/hicolor/*/apps/tali.png
+%{_iconsdir}/hicolor/scalable/apps/tali.svg
 %{_datadir}/glib-2.0/schemas/org.gnome.tali.gschema.xml
 %{_datadir}/tali
 %{_desktopdir}/tali.desktop
