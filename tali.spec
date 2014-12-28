@@ -10,7 +10,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/tali/3.12/%{name}-%{version}.tar
 URL:		https://wiki.gnome.org/Apps/Tali
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gnome-common
 BuildRequires:	gtk+3-devel >= 3.10.0
 BuildRequires:	intltool >= 0.50.0
