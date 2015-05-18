@@ -1,25 +1,26 @@
 Summary:	GNOME Tali
 Summary(pl.UTF-8):	Tali dla GNOME
 Name:		tali
-Version:	3.12.2
+Version:	3.16.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/tali/3.12/%{name}-%{version}.tar.xz
-# Source0-md5:	d26dbc8eac48f8fa126b48283a056152
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/tali/3.16/%{name}-%{version}.tar.xz
+# Source0-md5:	af4296b252752e96f9f4014ebbe4b75a
 URL:		https://wiki.gnome.org/Apps/Tali
+BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	gettext-tools
 BuildRequires:	gnome-common
-BuildRequires:	gtk+3-devel >= 3.10.0
+BuildRequires:	gtk+3-devel >= 3.15.0
 BuildRequires:	intltool >= 0.50.0
 BuildRequires:	librsvg-devel >= 2.32.0
 BuildRequires:	pkgconfig
 BuildRequires:	yelp-tools
 Requires(post,postun):	glib2 >= 1:2.26.0
 Requires(post,postun):	gtk-update-icon-cache
-Requires:	gtk+3 >= 3.10.0
+Requires:	gtk+3 >= 3.15.0
 Requires:	hicolor-icon-theme
 Requires:	librsvg >= 2.32.0
 Provides:	gnome-games-gtali = 1:%{version}-%{release}
@@ -57,12 +58,10 @@ rm -rf $RPM_BUILD_ROOT
 rm -rf $RPM_BUILD_ROOT
 
 %post
-%update_icon_cache HighContrast
 %update_icon_cache hicolor
 %glib_compile_schemas
 
 %postun
-%update_icon_cache HighContrast
 %update_icon_cache hicolor
 %glib_compile_schemas
 
@@ -71,10 +70,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc NEWS
 %attr(755,root,root) %{_bindir}/tali
 %{_datadir}/appdata/tali.appdata.xml
-%{_iconsdir}/HighContrast/*/apps/tali.png
-%{_iconsdir}/hicolor/*/apps/tali.png
-%{_iconsdir}/hicolor/scalable/apps/tali.svg
 %{_datadir}/glib-2.0/schemas/org.gnome.tali.gschema.xml
 %{_datadir}/tali
+%{_iconsdir}/hicolor/*x*/apps/tali.png
+%{_iconsdir}/hicolor/scalable/apps/tali.svg
+%{_iconsdir}/hicolor/symbolic/apps/tali-symbolic.svg
 %{_desktopdir}/tali.desktop
 %{_mandir}/man6/tali.6*
