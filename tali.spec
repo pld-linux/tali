@@ -1,12 +1,12 @@
 Summary:	GNOME Tali
 Summary(pl.UTF-8):	Tali dla GNOME
 Name:		tali
-Version:	3.18.0
+Version:	3.20.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/tali/3.18/%{name}-%{version}.tar.xz
-# Source0-md5:	c655388993f02823ed15c11b3f7583f3
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/tali/3.20/%{name}-%{version}.tar.xz
+# Source0-md5:	94dfe5d5d8d68837f106b1f1a8ced379
 URL:		https://wiki.gnome.org/Apps/Tali
 BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.63
@@ -73,7 +73,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/glib-2.0/schemas/org.gnome.tali.gschema.xml
 %{_datadir}/tali
 %{_iconsdir}/hicolor/*x*/apps/tali.png
-%{_iconsdir}/hicolor/scalable/apps/tali.svg
 %{_iconsdir}/hicolor/symbolic/apps/tali-symbolic.svg
 %{_desktopdir}/tali.desktop
 %{_mandir}/man6/tali.6*
