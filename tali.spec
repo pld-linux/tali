@@ -12,7 +12,6 @@ BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	gettext-tools
-BuildRequires:	gnome-common
 BuildRequires:	gtk+3-devel >= 3.15.0
 BuildRequires:	intltool >= 0.50.0
 BuildRequires:	librsvg-devel >= 2.32.0
