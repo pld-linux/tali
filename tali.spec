@@ -1,27 +1,25 @@
 Summary:	GNOME Tali
 Summary(pl.UTF-8):	Tali dla GNOME
 Name:		tali
-Version:	3.22.0
+Version:	3.32.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/tali/3.22/%{name}-%{version}.tar.xz
-# Source0-md5:	e19a4ee329fd78ec1e7872e4d62a5daa
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/tali/3.32/%{name}-%{version}.tar.xz
+# Source0-md5:	fd9ae959249d7e19d9bad8cdbf78c74e
 URL:		https://wiki.gnome.org/Apps/Tali
-BuildRequires:	appstream-glib-devel
-BuildRequires:	autoconf >= 2.63
-BuildRequires:	automake >= 1:1.11
+BuildRequires:	appstream-glib
 BuildRequires:	gettext-tools
-BuildRequires:	gtk+3-devel >= 3.15.0
-BuildRequires:	intltool >= 0.50.0
-BuildRequires:	librsvg-devel >= 2.32.0
+BuildRequires:	gtk+3-devel >= 3.16.0
+BuildRequires:	meson >= 0.37.1
+BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
+BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	yelp-tools
 Requires(post,postun):	glib2 >= 1:2.26.0
 Requires(post,postun):	gtk-update-icon-cache
-Requires:	gtk+3 >= 3.15.0
+Requires:	gtk+3 >= 3.16.0
 Requires:	hicolor-icon-theme
-Requires:	librsvg >= 2.32.0
 Provides:	gnome-games-gtali = 1:%{version}-%{release}
 Obsoletes:	gnome-games-gtali < 1:3.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -36,20 +34,14 @@ Gra w kości w pokerowym stylu.
 %setup -q
 
 %build
-%{__intltoolize}
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
-%configure \
-	--disable-silent-rules
-%{__make}
+%meson build
+
+%ninja_build -C build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+%ninja_install -C build
 
 %find_lang %{name} --with-gnome --all-name
 
@@ -68,10 +60,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc NEWS
 %attr(755,root,root) %{_bindir}/tali
-%{_datadir}/appdata/tali.appdata.xml
-%{_datadir}/glib-2.0/schemas/org.gnome.tali.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.Tali.gschema.xml
+%{_datadir}/metainfo/org.gnome.Tali.appdata.xml
 %{_datadir}/tali
-%{_iconsdir}/hicolor/*x*/apps/tali.png
-%{_iconsdir}/hicolor/symbolic/apps/tali-symbolic.svg
-%{_desktopdir}/tali.desktop
+%{_desktopdir}/org.gnome.Tali.desktop
+%{_iconsdir}/hicolor/*x*/apps/org.gnome.Tali.png
+%{_iconsdir}/hicolor/symbolic/apps/org.gnome.Tali-symbolic.svg
 %{_mandir}/man6/tali.6*
