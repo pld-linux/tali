@@ -1,12 +1,12 @@
 Summary:	GNOME Tali
 Summary(pl.UTF-8):	Tali dla GNOME
 Name:		tali
-Version:	3.32.1
+Version:	3.36.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/tali/3.32/%{name}-%{version}.tar.xz
-# Source0-md5:	fd9ae959249d7e19d9bad8cdbf78c74e
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/tali/3.36/%{name}-%{version}.tar.xz
+# Source0-md5:	518a8aee4b6cc1ea384dd0d4fb765a0c
 URL:		https://wiki.gnome.org/Apps/Tali
 BuildRequires:	appstream-glib
 BuildRequires:	gettext-tools
@@ -15,7 +15,9 @@ BuildRequires:	meson >= 0.37.1
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	yelp-tools
+BuildRequires:	xz
 Requires(post,postun):	glib2 >= 1:2.26.0
 Requires(post,postun):	gtk-update-icon-cache
 Requires:	gtk+3 >= 3.16.0
