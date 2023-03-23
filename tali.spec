@@ -1,12 +1,12 @@
 Summary:	GNOME Tali
 Summary(pl.UTF-8):	Tali dla GNOME
 Name:		tali
-Version:	40.8
+Version:	40.9
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	https://download.gnome.org/sources/tali/40/%{name}-%{version}.tar.xz
-# Source0-md5:	13388eae17cd46622372458ac29ddfbb
+# Source0-md5:	2cfe5f5cc699625753b9f57ca4261b7b
 URL:		https://wiki.gnome.org/Apps/Tali
 BuildRequires:	appstream-glib
 BuildRequires:	gettext-tools
